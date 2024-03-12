@@ -1,4 +1,4 @@
-import AddToCart from '@/components/header/products/AddToCart'
+import AddToCart from '@/components/products/AddToCart'
 import data from '@/lib/data'
 import productService from '@/lib/services/productService'
 import Image from 'next/image'
