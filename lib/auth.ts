@@ -56,17 +56,21 @@ export const config = {
     async jwt({ user, trigger, session, token }: any) {
       if (user) {
         token.user = {
-          _id: user._id,
-          email: user.email,
-          name: user.name,
-          isAdmin: user.isAdmin,
+          // _id: user._id,
+          // email: user.email,
+          // name: user.name,
+          // isAdmin: user.isAdmin,
+          _id: user.id,
+          email: user._doc.email,
+          name: user._doc.name,
+          isAdmin: user._doc.isAdmin,
         }
       }
       if (trigger === 'update' && session) {
         token.user = {
           ...token.user,
           email: session.user.email,
-          name: session.user.email,
+          name: session.user.name,
         }
       }
       return token

@@ -17,6 +17,7 @@ const Menu = () => {
   }
 
   const { data: session } = useSession()
+
   return (
     <div>
       <ul className="flex items-stretch">
